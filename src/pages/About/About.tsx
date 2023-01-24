@@ -11,7 +11,7 @@ const About = () => {
             id="about"
             className="mx-auto flex w-screen flex-col items-center justify-evenly bg-[#0D141C]"
         >
-            <section className="bg-yellow-60 grid w-full max-w-7xl grid-cols-1 gap-5 px-5 py-32 xl:grid-cols-2">
+            <section className="bg-yellow-60 grid w-full max-w-7xl grid-cols-1 gap-5 px-5 xl:py-32 xl:grid-cols-2 py-16">
                 <div className="bg-slate-40 flex w-full items-center justify-center overflow-hidden rounded-br-3xl rounded-tl-3xl">
                     <img
                         src={dorito}
