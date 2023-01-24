@@ -13,14 +13,14 @@ import Contact from "./pages/Contact";
 
 function App() {
     return (
-        <div className="App">
+        <>
             <Navbar />
             <Home />
             <About />
             <Skills />
             <Portfolio />
             <Contact />
-        </div>
+        </>
     );
 }
 
