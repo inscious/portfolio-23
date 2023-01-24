@@ -10,20 +10,27 @@ const Skills = () => {
                     My Technical Skills
                 </h1>
             </div>
-            <div className="bg-slate-40 mx-auto flex w-full max-w-7xl flex-row items-center justify-between px-5 pb-14">
+            {/* <div className="bg-slate-40 mx-auto flex w-full max-w-7xl flex-row items-center justify-between px-5 pb-14"> */}
+            <div className="bg-slate-5 lg:grid-flow-cl mx-auto grid w-full max-w-7xl grid-cols-2 md:grid-cols-5 px-5 pb-10 lg:grid-cols-10 lg:gap-5">
                 {skillsData.map((data, index) => {
                     return (
-                        <div className="h-20 w-20 duration-150 hover:scale-125">
+                        <div
+                            className="bg-orange-70 group col-span-1 flex flex-col items-center justify-center duration-200"
+                            key={data.alt}
+                        >
                             <img
                                 src={require("./images/" + data.img + ".png")}
                                 alt={data.alt}
-                                className=""
-                                key={data.alt}
+                                className="relative bottom-0 h-20 w-20 scale-75 duration-200 hover:scale-110 group-hover:bottom-3"
                             />
+                            <p className="relative text-sm font-thin text-transparent duration-300 group-hover:text-white">
+                                {data.alt}
+                            </p>
                         </div>
                     );
                 })}
             </div>
+            {/* </div> */}
         </div>
     );
 };

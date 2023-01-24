@@ -36,7 +36,7 @@ const skillsData = [
         img: "postgres",
     },
     {
-        alt: "Tailwind",
+        alt: "TailwindCSS",
         img: "tw",
     },
 ];

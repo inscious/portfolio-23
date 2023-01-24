@@ -109,8 +109,8 @@ const Navbar = () => {
                     <div
                         className={
                             nav
-                                ? "duration-30 fixed top-0 right-0 z-40 flex h-screen w-full bg-black duration-500 lg:hidden"
-                                : "fixed top-0 right-[-100%] z-50 h-full w-0 bg-black duration-500"
+                                ? "duration-30 fixed top-0 right-0 z-40 flex h-screen w-full bg-[#060A0E]/90 backdrop-blur-lg duration-500 lg:hidden"
+                                : "fixed top-0 right-[-100%] z-50 h-full w-0 bg-[#060A0E]/90 duration-500 "
                         }
                     >
                         <ul className="absolute right-0 flex h-full w-full flex-col items-center justify-evenly">
