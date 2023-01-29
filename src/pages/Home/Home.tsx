@@ -6,7 +6,7 @@ const Home = () => {
     return (
         <div
             id="home"
-            className="flex h-screen w-screen items-center justify-center bg-gradient-to-bl from-[#0D141C] to-[#0c0216]"
+            className="flex h-screen w-screen items-center justify-center bg-gradient-to-t from-[#0D141C] to-[#0b2c36]"
         >
             <div className="bg-slate-5 flex w-full max-w-7xl justify-evenly px-5">
                 <div className="bg-blac flex flex-col items-center justify-center">

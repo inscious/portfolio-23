@@ -17,7 +17,7 @@ const About = () => {
                         <img
                             src={dorito}
                             alt="saul cortes"
-                            className="aspect-square w-full max-w-[500px] items-center justify-center object-cover"
+                            className="aspect-square w-full max-w-[500px] items-center justify-center rounded-br-3xl rounded-tl-3xl object-cover"
                         />
                     </div>
                 </>

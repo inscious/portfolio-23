@@ -30,7 +30,7 @@ const Navbar = () => {
                         {navData.map((data, index) => {
                             return (
                                 <li
-                                    className="flex h-full items-center px-5"
+                                    className="nav-item flex h-full items-center px-5"
                                     key={index}
                                 >
                                     <Link
@@ -39,6 +39,7 @@ const Navbar = () => {
                                         duration={500}
                                         offset={-64}
                                         className="flex cursor-pointer items-center text-sm font-thin text-white duration-150 hover:text-[#F5AB00]"
+                                        spy={true}
                                     >
                                         {data.title}
                                     </Link>
@@ -118,7 +119,7 @@ const Navbar = () => {
                                 return (
                                     <li
                                         key={index}
-                                        className="flex w-full items-center justify-center"
+                                        className="nav-item flex w-full items-center justify-center"
                                     >
                                         <Link
                                             to={data.link}
@@ -126,6 +127,7 @@ const Navbar = () => {
                                             duration={500}
                                             className="flex cursor-pointer items-center text-sm font-thin text-white duration-150 hover:text-[#F5AB00]"
                                             onClick={handleNav}
+                                            spy={true}
                                         >
                                             {data.title}
                                         </Link>

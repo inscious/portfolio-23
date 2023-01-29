@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.nav-item .active {
+    color: #f5ab00;
+    transition-duration: 200ms;
+}

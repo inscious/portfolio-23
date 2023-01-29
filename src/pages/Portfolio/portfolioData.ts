@@ -8,7 +8,7 @@ const portfolioData = [
         code: "https://github.com/inscious",
     },
     {
-        img: "rest-rant",
+        img: "baja-goons",
         title: "Baja Goons",
         description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati eligendi architecto modi quibusdam possimus tempora atque laborum eveniet, ipsam fugit illum autem quia harum dolore dicta iusto inventore sed laudantium velit veritatis et quo? Dolorum, laboriosam temporibus illo vitae odit sed minima rerum hic in asperiores ullam doloribus, odio qui!",
