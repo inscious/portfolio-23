@@ -18,7 +18,7 @@ const Navbar = () => {
         <nav
             className={classNames(
                 scrollPosition > 128
-                    ? "h-16 lg:bg-[#060A0E]/60 lg:backdrop-blur-lg"
+                    ? "h-16 lg:bg-[#1B2829] lg:backdrop-blur-lg"
                     : "h-28",
                 "fixed top-0 z-50 w-full duration-300"
             )}
@@ -38,7 +38,7 @@ const Navbar = () => {
                                         smooth={true}
                                         duration={500}
                                         offset={-64}
-                                        className="flex cursor-pointer items-center text-sm font-thin text-white duration-150 hover:text-[#F5AB00]"
+                                        className="flex cursor-pointer items-center text-sm font-thin text-white duration-150 hover:text-[#7189FF]"
                                         spy={true}
                                     >
                                         {data.title}

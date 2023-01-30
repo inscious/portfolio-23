@@ -1,11 +1,12 @@
-import img1 from "./images/rest-rant.png";
-import img2 from "./images/baja-goons.png";
+import img1 from "./images/rest-rant.jpg";
+import img2 from "./images/baja-goons.jpg";
+import img3 from './images/peacock-clone.jpg'
 
 const portfolioData = [
     {
         img: img1,
         title: "Rest / Яant",
-        description: "Rest / Rant Description",
+        description: "Rest / Rant Description, ipsum dolor sit amet consectetur adipisicing elit. Mollitia suscipit assumenda ad enim ipsam, numquam placeat est necessitatibus reiciendis rem voluptates beatae consectetur accusamus dolorem! Baja Goons Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia suscipit assumenda ad enim ipsam, numquam placeat est necessitatibus reiciendis rem voluptates beatae consectetur accusamus dolorem! Baja Goons Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia suscipit assumenda ad enim ipsam, numquam placeat est necessitatibus reiciendis rem voluptates beatae consectetur accusamus dolorem! ",
         demo: "https://github.com/inscious",
         code: "https://github.com/inscious/rest-rant-2.0",
     },
@@ -18,9 +19,16 @@ const portfolioData = [
         code: "https://github.com/inscious/Baja-Goons",
     },
     {
-        img: img1,
+        img: img3,
         title: "Peacock Clone",
-        description: "Peacock Description",
+        description: "Peacock Description suscipit assumenda ad enim ipsam, numquam placeat est necessitatibus reiciendis rem voluptates beatae consectetur accusamus dolorem! Baja Goons Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia suscipit assumenda ad enim ipsam, numquam placeat est necessitatibus reiciendis rem voluptates beatae consectetur accusamus dolorem! Baja Goons Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia suscipit assumenda ad enim ipsam, numquam placeat est necessitatibus reiciendis rem voluptates beatae consectetur accusamus dolorem! ",
+        demo: "https://github.com/inscious",
+        code: "https://github.com/inscious/peacock-clone",
+    },
+    {
+        img: img3,
+        title: "The Boys API",
+        description: "Peacock Description suscipit assumenda ad enim ipsam, numquam placeat est necessitatibus reiciendis rem voluptates beatae consectetur accusamus dolorem! Baja Goons Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia suscipit assumenda ad enim ipsam, numquam placeat est necessitatibus reiciendis rem voluptates beatae consectetur accusamus dolorem! Baja Goons Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia suscipit assumenda ad enim ipsam, numquam placeat est necessitatibus reiciendis rem voluptates beatae consectetur accusamus dolorem! ",
         demo: "https://github.com/inscious",
         code: "https://github.com/inscious/peacock-clone",
     },
