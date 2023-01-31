@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import portfolioData from "./portfolioData";
 // import GridItem from "./GridItem";
 // import Modal from "./Modal";
+import { motion } from "framer-motion";
 
 const Portfolio = () => {
     const [modal, setModal] = useState(false);
@@ -10,76 +11,99 @@ const Portfolio = () => {
         setModal(!modal);
         // console.log("modal toggled");
     };
-    const getData = (img, title, description, demo, code) => {
-        let tempData = [img, title, description, demo, code];
+    const getData = (img, title, description, demo, code, tech) => {
+        let tempData = [img, title, description, demo, code, tech];
         setModalContent((item) => [1, ...tempData]);
         // console.log(tempData);
         return toggleModal();
     };
 
-    // console.log(modalContent);
+    console.log(modalContent);
 
     return (
         <section
             id="portfolio"
-            className="flex h-full w-screen flex-col items-center justify-center bg-black"
+            className="flex h-full w-screen flex-col items-center justify-center bg-white duration-200 dark:bg-[#070B0E]"
         >
             {/* MODAL */}
             <>
                 {modal === true ? (
                     <>
-                        <div
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{
+                                opacity: 1,
+                                transition: { duration: 0.2 },
+                            }}
+                            exit={{
+                                opacity: 0,
+                                transition: { duration: 1 },
+                            }}
                             id="Modal"
-                            className="fixed top-0 left-0 z-50 h-full w-full bg-white/10 backdrop-blur-lg"
+                            className="fixed top-0 left-0 z-50 h-full w-full bg-black/30 backdrop-blur-lg"
                         >
-                            <div className="bg-violet-60 relative mx-auto grid h-full flex-row overflow-hidden bg-black drop-shadow-xl lg:top-1/4 lg:h-1/2 lg:w-[75%] lg:grid-cols-2 lg:rounded-2xl">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                    className="absolute right-5 top-5 z-50 flex h-8 w-8 cursor-pointer stroke-white stroke-1 drop-shadow-lg duration-150 hover:stroke-[#F5AB00] hover:stroke-2 lg:hidden"
-                                    onClick={toggleModal}
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        d="M6 18L18 6M6 6l12 12"
-                                    />
-                                </svg>
+                            <div className="bg-violet-60 relative mx-auto grid h-full flex-row overflow-hidden bg-[#070B0E] drop-shadow-xl lg:top-1/4 lg:h-1/2 lg:w-[75%] lg:grid-cols-2 lg:rounded-2xl">
+                                <>
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                        className="absolute right-5 top-5 z-50 flex h-8 w-8 cursor-pointer stroke-white stroke-2 drop-shadow-lg duration-150 lg:hidden"
+                                        onClick={toggleModal}
+                                    >
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            d="M6 18L18 6M6 6l12 12"
+                                        />
+                                    </svg>
+                                </>
                                 <img
                                     className="h-full w-full object-cover"
                                     src={modalContent[1]}
                                     alt={modalContent[2]}
                                 />
                                 <div className="flex w-full flex-col items-start justify-between overflow-y-auto">
-                                    <div className="bg-slate-70 flex w-full flex-row justify-between px-5 pt-5">
-                                        <h1 className="font- mb-5 whitespace-nowrap text-2xl tracking-wide text-white">
+                                    <div className="bg-slate-70 flex w-full flex-row justify-between bg-[] px-5 pt-5">
+                                        {/* TITLE */}
+                                        <h3 className="whitespace-nowrap bg-[] text-2xl font-bold tracking-wide text-white">
                                             {modalContent[2]}
-                                        </h1>
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            fill="none"
-                                            viewBox="0 0 24 24"
-                                            stroke="currentColor"
-                                            className="z-50 hidden h-8 w-8 cursor-pointer stroke-white stroke-1 duration-150 hover:stroke-[#F5AB00] hover:stroke-2 lg:flex"
-                                            onClick={toggleModal}
-                                        >
-                                            <path
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                                d="M6 18L18 6M6 6l12 12"
-                                            />
-                                        </svg>
+                                        </h3>
+                                        {/* SVG CLOSE */}
+                                        <>
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                fill="none"
+                                                viewBox="0 0 24 24"
+                                                stroke="currentColor"
+                                                className="z-50 hidden h-8 w-8 cursor-pointer stroke-white stroke-1 duration-150 hover:stroke-2 lg:flex"
+                                                onClick={toggleModal}
+                                            >
+                                                <path
+                                                    strokeLinecap="round"
+                                                    strokeLinejoin="round"
+                                                    d="M6 18L18 6M6 6l12 12"
+                                                />
+                                            </svg>
+                                        </>
                                     </div>
+                                    {/* TECH */}
                                     <div className="bg-green-70 h-full w-full overflow-y-auto px-5 py-5">
-                                        <p className="text-sm font-thin tracking-wide text-white">
+                                        <h4 className="mb-5 text-sm font-bold text-white">
+                                            Technologies:{" "}
+                                            <span className="font-thin">
+                                                {modalContent[6]}
+                                            </span>
+                                        </h4>
+                                        <p className="text-md font-normal tracking-wide text-white">
                                             {modalContent[3]}
                                         </p>
                                     </div>
+                                    {/* BUTTONS */}
                                     <div className="flex w-full justify-between px-5 py-5">
                                         <a
-                                            className="rounded-lg border border-[#F5AB00] px-5 py-2 text-white duration-150 hover:bg-[#F5AB00] hover:text-black"
+                                            className="rounded-lg border border-[#7189FF] px-5 py-2 text-white duration-150 hover:bg-[#7189FF]"
                                             target="_blank"
                                             href={modalContent[5]}
                                             rel="noreferrer"
@@ -87,7 +111,7 @@ const Portfolio = () => {
                                             CODE
                                         </a>
                                         <a
-                                            className="rounded-lg border border-[#F5AB00] px-5 py-2 text-white duration-150 hover:bg-[#F5AB00] hover:text-black"
+                                            className="rounded-lg border border-[#7189FF] px-5 py-2 text-white duration-150 hover:bg-[#7189FF]"
                                             target="_blank"
                                             href={modalContent[4]}
                                             rel="noreferrer"
@@ -97,7 +121,7 @@ const Portfolio = () => {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </motion.div>
                     </>
                 ) : (
                     ""
@@ -108,13 +132,13 @@ const Portfolio = () => {
                 <>
                     <div className="bg-emerald- flex w-full flex-col items-center">
                         <>
-                            <h1 className="hidden whitespace-nowrap text-8xl font-thin tracking-widest text-[#162230] xl:flex">
+                            <h1 className="hidden whitespace-nowrap text-8xl font-thin tracking-widest text-[#162230]/10 dark:text-[#162230] xl:flex">
                                 PORTFOLIO
                             </h1>
                         </>
                         <>
                             <div className="relative z-30 flex w-full flex-col items-center lg:-top-24 lg:mt-20 xl:mt-10">
-                                <h1 className="text-4xl font-bold text-white">
+                                <h1 className="text-4xl font-bold text-black dark:text-white">
                                     My latest work
                                 </h1>
                             </div>
@@ -155,13 +179,14 @@ const Portfolio = () => {
                                             data.title,
                                             data.description,
                                             data.demo,
-                                            data.code
+                                            data.code,
+                                            data.tech
                                         );
                                     }}
-                                    className="bg-[#F5AB00 group col-span-1 flex aspect-video h-full w-full scale-95 cursor-pointer flex-col items-center justify-center overflow-hidden rounded-xl border-2 border-transparent duration-200 hover:scale-100 hover:border-[#F5AB00]"
+                                    className="group col-span-1 flex aspect-video h-full w-full scale-95 cursor-pointer flex-col items-center justify-center overflow-hidden rounded-xl border-2 border-transparent duration-200 hover:scale-100 hover:border-[#7189FF]"
                                 >
                                     <div className="backdrop-blur-s relative top-1/2 flex h-full w-full items-center justify-center duration-200 group-hover:z-20">
-                                        <h1 className="whitespace-nowrap text-3xl font-bold text-white">
+                                        <h1 className="whitespace-nowrap text-3xl font-bold text-black dark:text-white">
                                             {data.title}
                                         </h1>
                                     </div>

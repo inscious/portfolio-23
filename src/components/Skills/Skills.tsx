@@ -4,9 +4,12 @@ import skillsData from "./skillsData";
 
 const Skills = () => {
     return (
-        <div className="flex h-screen w-screen flex-col items-center justify-evenly bg-[#060A0E] md:h-full">
+        <div
+            id="skills"
+            className="flex h-screen w-screen flex-col items-center justify-evenly bg-[#e2ebf1] dark:bg-[#0D161B] md:h-full"
+        >
             <div className="mx-auto flex max-w-7xl items-center justify-center md:pt-14">
-                <h1 className="text-4xl font-bold text-white">
+                <h1 className="text-4xl font-bold text-black dark:text-white">
                     My Technical Skills
                 </h1>
             </div>
@@ -15,15 +18,15 @@ const Skills = () => {
                 {skillsData.map((data, index) => {
                     return (
                         <div
-                            className="bg-orange-70 group col-span-1 flex cursor-text flex-col items-center justify-center duration-200 w-full pt-5"
+                            className="bg-orange-70 group col-span-1 flex w-full cursor-pointer flex-col items-center justify-center pt-5 duration-200"
                             key={index}
                         >
                             <img
                                 src={require("./images/" + data.img + ".png")}
                                 alt={data.alt}
-                                className="relative bottom-0 h-20 w-20 scale-75 duration-200 group-hover:bottom-2 group-hover:scale-110"
+                                className="relative bottom-0 h-20 w-20 scale-75 duration-200 group-hover:bottom-2 group-hover:scale-110 "
                             />
-                            <p className="relative text-sm font-thin text-transparent duration-300 group-hover:text-white">
+                            <p className="relative text-sm font-thin text-transparent duration-300 group-hover:text-black dark:group-hover:text-white">
                                 {data.alt}
                             </p>
                         </div>

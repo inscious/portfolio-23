@@ -3,6 +3,6 @@
 @tailwind utilities;
 
 .nav-item .active {
-    color: #f5ab00;
-    transition-duration: 200ms;
+    color: #7189FF;
+    transition-duration: 100ms;
 }

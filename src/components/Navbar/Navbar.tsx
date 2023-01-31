@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import navData from "../../assets/data/navData";
 import { Link, animateScroll as scroll } from "react-scroll";
-import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
-
+import { FiGithub, FiLinkedin } from "react-icons/fi";
 import useScrollPosition from "../../hooks/useScrollPosition";
 
 function classNames(...classes: string[]) {
@@ -18,7 +17,7 @@ const Navbar = () => {
         <nav
             className={classNames(
                 scrollPosition > 128
-                    ? "h-16 lg:bg-[#1B2829] lg:backdrop-blur-lg"
+                    ? "h-16 lg:bg-[#96b8cc] lg:backdrop-blur-lg dark:lg:bg-[#315267]"
                     : "h-28",
                 "fixed top-0 z-50 w-full duration-300"
             )}
@@ -56,14 +55,14 @@ const Navbar = () => {
                             target="_blank"
                             rel="noreferrer"
                         >
-                            <AiFillGithub className="cursor-pointer fill-white duration-150 hover:fill-[#F5AB00]" />
+                            <FiGithub className="h-5 w-5 cursor-pointer stroke-white stroke-1 duration-150 hover:stroke-[#7189FF]" />
                         </a>
                         <a
                             href="https://www.linkedin.com/in/ssaulcortes/"
                             target="_blank"
                             rel="noreferrer"
                         >
-                            <AiFillLinkedin className="ml-5 cursor-pointer fill-white duration-150 hover:fill-[#F5AB00]" />
+                            <FiLinkedin className="ml-5 h-5 w-5 cursor-pointer stroke-white stroke-1 duration-150 hover:stroke-[#7189FF]" />
                         </a>
                     </div>
                 </>
@@ -80,7 +79,7 @@ const Navbar = () => {
                                 fill="none"
                                 viewBox="0 0 24 24"
                                 stroke="currentColor"
-                                className="z-50 h-8 w-8 stroke-white stroke-1"
+                                className="hover:stroke-[#7189FF z-50 h-8 w-8 stroke-[#7189FF] stroke-1 duration-150"
                             >
                                 <path
                                     strokeLinecap="round"
@@ -94,7 +93,7 @@ const Navbar = () => {
                                 fill="none"
                                 viewBox="0 0 24 24"
                                 stroke="currentColor"
-                                className="z-50 h-8 w-8 stroke-white stroke-1"
+                                className="hover:stroke-[#7189FF z-50 h-8 w-8 stroke-[#7189FF] stroke-1 duration-150"
                             >
                                 <path
                                     strokeLinecap="round"
@@ -111,7 +110,7 @@ const Navbar = () => {
                         className={
                             nav
                                 ? "duration-30 fixed top-0 right-0 z-40 flex h-screen w-full bg-[#060A0E]/90 backdrop-blur-lg duration-500 lg:hidden"
-                                : "fixed top-0 right-[-100%] z-50 h-full w-0 bg-[#060A0E]/90 duration-500 "
+                                : "fixed top-0 right-[-100%] z-50 h-full w-0 bg-[#060A0E]/90 duration-500"
                         }
                     >
                         <ul className="absolute right-0 flex h-full w-full flex-col items-center justify-evenly">
@@ -125,7 +124,7 @@ const Navbar = () => {
                                             to={data.link}
                                             smooth={true}
                                             duration={500}
-                                            className="flex cursor-pointer items-center text-sm font-thin text-white duration-150 hover:text-[#F5AB00]"
+                                            className="flex cursor-pointer items-center text-sm font-thin text-white duration-150 hover:text-[#7189FF]"
                                             onClick={handleNav}
                                             spy={true}
                                         >

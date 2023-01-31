@@ -6,23 +6,23 @@ const Home = () => {
     return (
         <div
             id="home"
-            className="flex h-screen w-screen items-center justify-center bg-gradient-to-tl from-[#181E17] to-[#1B2829]"
+            className="flex h-screen w-screen items-center justify-center bg-gradient-to-br from-[#dde5ff] to-[#65979e] dark:from-[#0d1640] dark:to-[#4b7d84]"
         >
             <div className="bg-slate-5 flex w-full max-w-7xl justify-evenly px-5">
                 <div className="bg-blac flex flex-col items-center justify-center">
-                    <h1 className="text-2xl font-thin text-white">
+                    <h1 className="text-2xl font-thin text-black dark:text-white">
                         Hey, I'm Saul!
                     </h1>
-                    <h2 className="md:text-6xl font-thin text-white text-5xl">
+                    <h2 className="text-5xl font-thin text-black dark:text-white md:text-6xl">
                         I'm a{" "}
-                        <span className="font- font-bold text-[#F5AB00]">
+                        <span className="font- font-bold text-[#7189FF]">
                             Front-End{" "}
                         </span>
                         <br />
                         Wed Developer.
                     </h2>
                 </div>
-                <div className="rounded-full border-2 border-[#F5AB00] p-2 hidden lg:flex">
+                <div className="hidden rounded-full border-2 border-[#7189FF] p-2 lg:flex">
                     <img
                         src={dorito}
                         alt=""
