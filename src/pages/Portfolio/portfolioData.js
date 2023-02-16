@@ -1,6 +1,7 @@
 import img1 from "./images/rest-rant.jpg";
 import img2 from "./images/baja-goons.jpg";
 import img3 from "./images/peacock-clone.jpg";
+import img4 from "./images/redux-counter.jpg";
 
 const portfolioData = [
     {
@@ -26,18 +27,27 @@ const portfolioData = [
         title: "PeacockTV Clone",
         description:
             "A static PeacockTV clone created with React, providing a visually similar interface without any functionalities. The platform is designed using React components to replicate the appearance of the PeacockTV platform, but does not include any functionalities such as streaming videos or searching for content. It serves as a visually appealing design reference for users.",
-        demo: "https://github.com/inscious",
+        demo: "https://peacock-clone.netlify.app/",
         code: "https://github.com/inscious/peacock-clone",
         tech: "ReactJS, TailwindCSS, Styled Components & SwiperJS",
     },
+    // {
+    //     img: img3,
+    //     title: "The Boys API",
+    //     description:
+    //         "Peacock Description suscipit assumenda ad enim ipsam, numquam placeat est necessitatibus reiciendis rem voluptates beatae consectetur accusamus dolorem! Baja Goons Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia suscipit assumenda ad enim ipsam, numquam placeat est necessitatibus reiciendis rem voluptates beatae consectetur accusamus dolorem! Baja Goons Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia suscipit assumenda ad enim ipsam, numquam placeat est necessitatibus reiciendis rem voluptates beatae consectetur accusamus dolorem! ",
+    //     demo: "https://github.com/inscious",
+    //     code: "https://github.com/inscious/peacock-clone",
+    //     tech: "",
+    // },
     {
-        img: img3,
-        title: "The Boys API",
+        img: img4,
+        title: "Redux Counter",
         description:
-            "Peacock Description suscipit assumenda ad enim ipsam, numquam placeat est necessitatibus reiciendis rem voluptates beatae consectetur accusamus dolorem! Baja Goons Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia suscipit assumenda ad enim ipsam, numquam placeat est necessitatibus reiciendis rem voluptates beatae consectetur accusamus dolorem! Baja Goons Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia suscipit assumenda ad enim ipsam, numquam placeat est necessitatibus reiciendis rem voluptates beatae consectetur accusamus dolorem! ",
-        demo: "https://github.com/inscious",
-        code: "https://github.com/inscious/peacock-clone",
-        tech: "",
+            "A React counter application that allows users to increment or decrement a number displayed on the screen. The app utilizes Redux to manage the state of the counter and ensure seamless updates across the components. With its simple and intuitive design, users can quickly perform counting operations and track their progress.",
+        demo: "https://kaleidoscopic-mooncake-7d7aa9.netlify.app",
+        code: "https://github.com/inscious/",
+        tech: "Redux, Tailwind",
     },
 ];
 

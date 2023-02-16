@@ -19,7 +19,7 @@ const ThemeIcon = () => {
 
 const Footer = () => {
     return (
-        <div className="h-full w-full bg-[#315267]">
+        <div className="h-full w-full bg-[#96b8cc] duration-200 dark:bg-[#315267]">
             <div className="bg-slate-00 mx-auto flex max-w-7xl flex-col items-center justify-between py-8 px-5 lg:flex-row">
                 <div className="flex h-full items-center justify-center lg:mt-0">
                     <a

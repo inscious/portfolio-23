@@ -29,7 +29,7 @@ const Navbar = () => {
                         {navData.map((data, index) => {
                             return (
                                 <li
-                                    className="nav-item flex h-full items-center px-5"
+                                    className="nav-item bg-slate-00 flex h-full items-center px-5"
                                     key={index}
                                 >
                                     <Link

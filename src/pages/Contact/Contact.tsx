@@ -6,7 +6,7 @@ const Contact = () => {
             className="mx-auto flex h-full w-screen flex-col items-center bg-[#e6ecf5] duration-200 dark:bg-[#0D141C]"
             id="contact"
         >
-            <div className="bg-purple-00 mt-14 lg:mt-0">
+            <div className="bg-purple-00 lg:mt- mt-8">
                 <h1 className="bg-green-00 my-14 hidden text-5xl font-thin tracking-widest text-[#7189FF]/10 lg:block lg:text-8xl">
                     CONTACT
                 </h1>
@@ -16,7 +16,7 @@ const Contact = () => {
                     </h1>
                 </div>
             </div>
-            <section className="bg-slate-00 bg-red-00 mx-auto mb-28 grid w-full max-w-7xl grid-cols-1 px-5 py-14 lg:mt-0 lg:grid-cols-2">
+            <section className="bg-red-00 mx-auto mb-32 grid w-full max-w-7xl grid-cols-1 bg-slate-00 px-5 py-14 lg:mb-28 lg:mt-0 lg:grid-cols-2">
                 <div className="bg-amber-00 flex h-full w-full flex-col items-start justify-start">
                     <div className="pt- -full bg-violet-00 flex w-full flex-row items-center justify-start pb-10">
                         <div className="mr-5">
@@ -26,7 +26,7 @@ const Contact = () => {
                                 viewBox="0 0 24 24"
                                 strokeWidth={1.5}
                                 stroke="currentColor"
-                                className="h-8 w-8 stroke-black stroke-1 dark:stroke-white duration-200"
+                                className="h-8 w-8 stroke-black stroke-1 duration-200 dark:stroke-white"
                             >
                                 <path
                                     strokeLinecap="round"
@@ -105,7 +105,7 @@ const Contact = () => {
                             className="mx-auto mb-8 w-full rounded-md bg-[#cdd7e5] py-10 px-3 text-gray-300 ring-[#7189FF] duration-200 focus:outline-none focus:ring-1 dark:bg-gray-800"
                             placeholder="Your Message"
                         ></input>
-                        <button className="rounded-md border border-[#7189FF] px-5 py-3 text-black duration-150 hover:bg-[#7189FF] hover:text-white focus:ring">
+                        <button className="rounded-md border border-[#7189FF] px-5 py-3 font-thin text-black duration-150 hover:bg-[#7189FF] hover:text-white focus:ring dark:text-white">
                             Send Message
                         </button>
                     </form>
